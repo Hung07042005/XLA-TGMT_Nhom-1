@@ -1,11 +1,9 @@
 import cv2
 import os
 
-# ==================== THAY ĐƯỜNG DẪN ẢNH CỦA BẠN Ở ĐÂY ====================
-img_path = 'photo.jpg'          # ←←←←← THAY BẰNG ẢNH MÀU CỦA BẠN
-# ======================================================================
+img_path = 'photo.jpg'
 
-# Đọc ảnh (màu để dễ so sánh dung lượng file)
+# Đọc ảnh
 img = cv2.imread(img_path)
 
 if img is None:
@@ -13,7 +11,7 @@ if img is None:
 else:
     print(f"✅ Shape ảnh gốc: {img.shape} (W x H x Channels)")
 
-    # Giảm kích thước bằng slicing (theo đúng yêu cầu bài)
+    # Giảm kích thước bằng slicing 
     img_half = img[::2, ::2]
     print(f"✅ Shape ảnh 1/2: {img_half.shape}")
 

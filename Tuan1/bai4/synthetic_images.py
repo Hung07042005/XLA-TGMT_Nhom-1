@@ -27,10 +27,6 @@ for i in range(height):
         else:
             checker[i, j] = 0
 
-# Cách ngắn hơn (vectorized - nhanh & đẹp):
-# checker = ((np.arange(height)[:,None] // 32 + np.arange(width) // 32) % 2) * 255
-# checker = checker.astype(np.uint8)
-
 # =================================================================
 # Ảnh 3: Vòng tròn trắng trên nền đen
 # =================================================================
@@ -80,4 +76,3 @@ cv2.imwrite('multi_pattern_rgb.jpg', rgb_multi)
 print("Bonus RGB:")
 print("  gradient_rgb.jpg        → gradient xám trên 3 kênh")
 print("  multi_pattern_rgb.jpg   → mỗi kênh một pattern khác nhau")
-print("Hoàn tất! Mở 3 file ảnh để kiểm tra kết quả.")
